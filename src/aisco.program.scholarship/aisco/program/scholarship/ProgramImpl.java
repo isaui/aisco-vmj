@@ -6,13 +6,13 @@ import aisco.program.core.ProgramDecorator;
 public class ProgramImpl extends ProgramDecorator {
     private String name;
     private String scholarshipType;
-    private String duration;
+    private Integer durationInMonths;
 
-    public ProgramImpl(ProgramComponent program, String name, String scholarshipType, String duration) {
+    public ProgramImpl(ProgramComponent program, String name, String scholarshipType, Integer durationInMonths) {
         super(program);
         this.name = name;
         this.scholarshipType = scholarshipType;
-        this.duration = duration;
+        this.durationInMonths = durationInMonths;
     }
 
     public String getName() {
@@ -31,16 +31,17 @@ public class ProgramImpl extends ProgramDecorator {
         this.scholarshipType = scholarshipType;
     }
 
-    public String getDuration() {
-        return duration;
+    public Integer getDurationInMonths() {
+        return durationInMonths;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setDurationInMonths(Integer durationInMonths) {
+        this.durationInMonths = durationInMonths;
     }
 
     @Override
     public String toString() {
-        return program + ", Scholarship: " + name + ", Type: " + scholarshipType + ", duration: " + duration + ".";
+        return program + ", Scholarship: " + name + ", Type: " + scholarshipType + ", durationInMonths: "
+                + durationInMonths + ".";
     }
 }

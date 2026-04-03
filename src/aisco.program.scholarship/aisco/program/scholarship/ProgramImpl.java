@@ -4,23 +4,24 @@ import aisco.program.core.ProgramComponent;
 import aisco.program.core.ProgramDecorator;
 
 public class ProgramImpl extends ProgramDecorator {
-    private String name;
+    private String scholarshipName;
     private String scholarshipType;
     private Integer durationInMonths;
 
-    public ProgramImpl(ProgramComponent program, String name, String scholarshipType, Integer durationInMonths) {
+    public ProgramImpl(ProgramComponent program, String scholarshipName, String scholarshipType,
+            Integer durationInMonths) {
         super(program);
-        this.name = name;
+        this.scholarshipName = scholarshipName;
         this.scholarshipType = scholarshipType;
         this.durationInMonths = durationInMonths;
     }
 
-    public String getName() {
-        return name;
+    public String getScholarshipName() {
+        return scholarshipName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setScholarshipName(String scholarshipName) {
+        this.scholarshipName = scholarshipName;
     }
 
     public String getScholarshipType() {
@@ -41,7 +42,7 @@ public class ProgramImpl extends ProgramDecorator {
 
     @Override
     public String toString() {
-        return program + ", Scholarship: " + name + ", Type: " + scholarshipType + ", durationInMonths: "
+        return program + ", Scholarship: " + scholarshipName + ", Type: " + scholarshipType + ", durationInMonths: "
                 + durationInMonths + ".";
     }
 }

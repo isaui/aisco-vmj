@@ -11,7 +11,7 @@ import java.util.List;
 public class YayasanRSE {
         private static final int INDEX_GIFTS = 0;
         private static final int INDEX_ORPH = 1;
-        Private static final int INDEX_SCHOLARSHIP = 2;
+        private static final int INDEX_SCHOLARSHIP = 2;
 
         private static FinancialReport income2;
         private static FinancialReport expense1;

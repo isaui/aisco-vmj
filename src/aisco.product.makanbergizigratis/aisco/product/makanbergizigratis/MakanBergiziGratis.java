@@ -1,4 +1,4 @@
-package aisco.product.mbg;
+package aisco.product.makanbergizigratis;
 
 import aisco.program.core.Program;
 import aisco.program.ProgramFactory;

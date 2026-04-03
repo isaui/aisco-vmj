@@ -1,4 +1,4 @@
-module aisco.product.mbg {
+module aisco.product.makanbergizigratis {
     requires aisco.program.core;
     requires aisco.financialreport.core;
     requires aisco.donation.core;

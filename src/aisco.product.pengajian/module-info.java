@@ -4,6 +4,7 @@ module aisco.product.pengajian {
 
     requires aisco.program.activity;
     requires aisco.program.periodic;
+    requires aisco.program.corporate;
 
     requires aisco.financialreport.income;
     requires aisco.financialreport.expense;

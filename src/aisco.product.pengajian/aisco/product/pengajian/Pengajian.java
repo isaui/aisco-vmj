@@ -28,6 +28,10 @@ public class Pengajian {
         kajianSubuh = ProgramFactory.createProgram("aisco.program.periodic.ProgramImpl", kajianSubuh, "daily");
         pengajianAkbar = ProgramFactory.createProgram("aisco.program.periodic.ProgramImpl", pengajianAkbar, "monthly");
 
+        // Dekorasi dengan corporate
+        kajianSubuh = ProgramFactory.createProgram("aisco.program.corporate.ProgramImpl", kajianSubuh, "PT Amanah Pangan Nusantara");
+        pengajianAkbar = ProgramFactory.createProgram("aisco.program.corporate.ProgramImpl", pengajianAkbar, "CV Berkah Teknologi Indonesia");
+
         programs.add(INDEX_KAJIAN_SUBUH, kajianSubuh);
         programs.add(INDEX_PENGAJIAN_AKBAR, pengajianAkbar);
         return programs;

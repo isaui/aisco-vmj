@@ -1,9 +1,9 @@
-module aisco.product.pengajian {
+module aisco.product.rumahbelajarcorporate {
     requires aisco.program.core;
     requires aisco.financialreport.core;
 
     requires aisco.program.activity;
-    requires aisco.program.periodic;
+    requires aisco.program.category;
     requires aisco.program.corporate;
 
     requires aisco.financialreport.income;

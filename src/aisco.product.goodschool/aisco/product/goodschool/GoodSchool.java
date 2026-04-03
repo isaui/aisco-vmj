@@ -13,6 +13,7 @@ public class GoodSchool {
         private static final int INDEX_SCHOOL = 0;
         private static final int INDEX_LIBRARY = 1;
         private static final int INDEX_ELECTRICITY = 2;
+        private static final int INDEX_SCHOLARSHIP = 3;
 
         private static FinancialReport income1;
         private static FinancialReport expense1;
@@ -35,7 +36,7 @@ public class GoodSchool {
                 programs.add(INDEX_SCHOOL, schoolconstruction);
                 programs.add(INDEX_LIBRARY, freelibrary);
                 programs.add(INDEX_ELECTRICITY, paymentelectricity);
-                programs.add(withscholarship);
+                programs.add(INDEX_SCHOLARSHIP, withscholarship);
                 return programs;
         }
 
@@ -104,6 +105,14 @@ public class GoodSchool {
                 Donation donate = DonationFactory.createDonation("aisco.donation.pgateway.DonationImpl");
                 donate.addDonation();
                 donate.getDonation();
+        }
+
+        public static List<Program> addScholarship(List<Program> programs) {
+                List<Program> scholarships = new ArrayList<>();
+                Program withscholarship = ProgramFactory.createProgram("aisco.program.scholarship.ProgramImpl",
+                                programs.get(INDEX_SCHOLARSHIP), "Scholarship Dhuafa", "Full Scholarship", 48);
+                scholarships.add(withscholarship);
+                return scholarships;
         }
 
         public static void main(String[] args) {

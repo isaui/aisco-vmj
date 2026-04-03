@@ -11,6 +11,7 @@ import java.util.List;
 public class YayasanRSE {
         private static final int INDEX_GIFTS = 0;
         private static final int INDEX_ORPH = 1;
+        Private static final int INDEX_SCHOLARSHIP = 2;
 
         private static FinancialReport income2;
         private static FinancialReport expense1;
@@ -32,7 +33,7 @@ public class YayasanRSE {
                                 "Scholarship Venedict", "Partial Scholarship", 24);
                 programs.add(INDEX_GIFTS, sharegifts);
                 programs.add(INDEX_ORPH, orphanagecompetition);
-                programs.add(withscholarship);
+                programs.add(INDEX_SCHOLARSHIP, withscholarship);
                 return programs;
         }
 
@@ -94,7 +95,7 @@ public class YayasanRSE {
         public static List<Program> addScholarship(List<Program> programs) {
                 List<Program> scholarships = new ArrayList<>();
                 Program withscholarship = ProgramFactory.createProgram("aisco.program.scholarship.ProgramImpl",
-                                programs.get(0),
+                                programs.get(INDEX_SCHOLARSHIP),
                                 "Scholarship Dhuafa", "Full Scholarship", 48);
                 scholarships.add(withscholarship);
                 return scholarships;
